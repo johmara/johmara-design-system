@@ -1,0 +1,26 @@
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    padding: var(--ds-space-3);
+    border-bottom: 2px solid var(--ds-color-bg-subtle);
+    color: var(--ds-color-heading);
+    text-align: left;
+  }
+
+  td {
+    padding: var(--ds-space-3);
+    border-bottom: 1px solid var(--ds-color-bg-subtle);
+    color: var(--ds-color-text-muted);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--ds-color-primary);
+    }
+  }
+}

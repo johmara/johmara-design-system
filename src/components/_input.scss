@@ -1,0 +1,23 @@
+.ds-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ds-color-text-muted);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-color-bg);
+  color: var(--ds-color-text);
+  font: inherit;
+  font-size: var(--ds-text-base);
+  transition: border-color var(--ds-duration-base) var(--ds-ease), box-shadow var(--ds-duration-base) var(--ds-ease);
+
+  &::placeholder {
+    color: var(--ds-color-text-muted);
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--ds-color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-primary) 35%, transparent);
+  }
+}

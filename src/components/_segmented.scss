@@ -1,0 +1,27 @@
+.ds-segmented {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--ds-color-text-muted);
+  border-radius: var(--ds-radius-sm);
+}
+
+.ds-segmented__item {
+  padding: 0.4rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--ds-color-text-muted);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: var(--ds-weight-semibold);
+  cursor: pointer;
+  transition: all var(--ds-duration-base) var(--ds-ease);
+
+  &:hover {
+    color: var(--ds-color-primary);
+  }
+
+  &.is-active {
+    background: var(--ds-color-primary);
+    color: var(--ds-color-bg);
+  }
+}

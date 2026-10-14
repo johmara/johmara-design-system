@@ -1,0 +1,48 @@
+// Pill: neutral tag (project pill, CV tag).
+.ds-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-color-bg-subtle);
+  color: var(--ds-color-primary);
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-medium);
+  line-height: var(--ds-leading-normal);
+}
+
+// Badge: status label (publication status).
+.ds-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-color-primary);
+  color: var(--ds-color-bg-subtle);
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+// Chip: type label (search results). Text uses bg color for contrast on the fill.
+.ds-chip {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-color-heading);
+  color: var(--ds-color-bg);
+  font-size: var(--ds-text-2xs);
+  font-weight: var(--ds-weight-semibold);
+  text-transform: uppercase;
+}
+
+.ds-chip--primary {
+  background: var(--ds-color-primary);
+}
+
+.ds-chip--success {
+  background: var(--ds-color-success);
+}
+
+.ds-chip--neutral {
+  background: var(--ds-color-heading);
+}

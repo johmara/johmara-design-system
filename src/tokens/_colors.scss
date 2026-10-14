@@ -1,0 +1,52 @@
+// Colors. Semantic --ds-* names are primary; legacy names from johmara.github.io
+// are kept as aliases so the site can migrate without touching component styles.
+// Dark theme: `.dark-mode` (site ThemeService) or `[data-theme="dark"]` on <html>.
+
+@mixin light-colors {
+  --ds-color-bg: #fdfffc;
+  --ds-color-bg-subtle: #f4f5f6;
+  --ds-color-text: #000;
+  --ds-color-text-muted: #6c757d;
+  --ds-color-heading: #333333;
+  --ds-color-primary: #0073b1;
+  --ds-color-primary-light: #47bfff;
+  --ds-color-success: #4cef99;
+  --ds-color-hint: #ff6b35;
+  --ds-color-code-bg: #f5f5f5;
+  --ds-color-overlay: rgba(0, 0, 0, 0.5);
+}
+
+@mixin dark-colors {
+  --ds-color-bg: #1f1f1f;
+  --ds-color-bg-subtle: #0d0d0d;
+  --ds-color-text: #e0e0e0;
+  --ds-color-text-muted: #b8bec4;
+  --ds-color-heading: #e0e0e0;
+  --ds-color-primary: #4da6ff;
+  --ds-color-primary-light: #66b3ff;
+  --ds-color-success: #5dffa7;
+  --ds-color-hint: #ff8c61;
+  --ds-color-code-bg: #2d2d2d;
+  --ds-color-overlay: rgba(0, 0, 0, 0.8);
+}
+
+:root {
+  @include light-colors;
+
+  // Legacy aliases (johmara.github.io)
+  --background-color: var(--ds-color-bg);
+  --background-color-darker: var(--ds-color-bg-subtle);
+  --main-color: var(--ds-color-text-muted);
+  --accent-color-1: var(--ds-color-heading);
+  --accent-color-2: var(--ds-color-primary);
+  --accent-color-2-lighter: var(--ds-color-primary-light);
+  --accent-color-3: var(--ds-color-success);
+  --accent-color-hint: var(--ds-color-hint);
+  --code-background: var(--ds-color-code-bg);
+  --text-color: var(--ds-color-text);
+}
+
+.dark-mode,
+[data-theme='dark'] {
+  @include dark-colors;
+}

@@ -1,0 +1,50 @@
+// Dropdown menu / tooltip shell.
+.ds-popover {
+  padding: 0.4rem;
+  border: 1px solid var(--ds-color-primary);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg);
+  box-shadow: var(--ds-shadow-lg);
+  animation: ds-drop-down var(--ds-duration-fast) var(--ds-ease);
+}
+
+.ds-popover--tooltip {
+  min-width: 200px;
+  max-width: 250px;
+  padding: var(--ds-space-3);
+  box-shadow: var(--ds-shadow-md);
+}
+
+.ds-popover__title {
+  margin: 0 0 var(--ds-space-2);
+  padding-bottom: var(--ds-space-2);
+  border-bottom: 1px solid var(--ds-color-primary);
+  color: var(--ds-color-primary);
+  font-size: 0.875rem;
+  font-weight: var(--ds-weight-semibold);
+}
+
+.ds-menu {
+  min-width: 180px;
+}
+
+.ds-menu__item {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border: 0;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: var(--ds-color-text-muted);
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--ds-duration-fast) var(--ds-ease);
+
+  &:hover {
+    background: var(--ds-color-bg-subtle);
+    color: var(--ds-color-primary);
+  }
+}

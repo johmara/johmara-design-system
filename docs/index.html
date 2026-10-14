@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@johmara/design-system</title>
+  <link rel="stylesheet" href="../dist/design-system.css">
+  <style>
+    main { max-width: 62rem; margin: 0 auto; padding: 2rem 1.25rem 6rem; }
+    section { margin-bottom: 3rem; }
+    .row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin: 1rem 0; }
+    .swatch { width: 9rem; border-radius: var(--ds-radius-md); overflow: hidden; border: 1px solid var(--ds-color-bg-subtle); font-size: var(--ds-text-xs); }
+    .swatch i { display: block; height: 3.5rem; }
+    .swatch span { display: block; padding: .4rem .5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .demo-modal { position: static; background: transparent; padding: 0; animation: none; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="row" style="justify-content: space-between">
+    <h1 style="color: var(--ds-color-heading)">@johmara/design-system</h1>
+    <button class="ds-btn ds-btn--outline" id="theme">Toggle dark</button>
+  </header>
+
+  <section>
+    <h2 class="ds-section-heading">Colors</h2>
+    <div class="row" id="swatches"></div>
+  </section>
+
+  <section>
+    <h2 class="ds-section-heading">Typography</h2>
+    <p style="font-size: var(--ds-text-2xl); font-weight: 700; color: var(--ds-color-heading)">2xl Heading 2.25rem</p>
+    <p style="font-size: var(--ds-text-xl); color: var(--ds-color-heading)">xl Heading 1.5rem</p>
+    <p style="font-size: var(--ds-text-lg); color: var(--ds-color-heading)">lg Heading 1.25rem</p>
+    <p>Body text in Inter, muted color. <span class="ds-mono">Monospace sample.</span></p>
+  </section>
+
+  <section>
+    <h2 class="ds-section-heading">Buttons</h2>
+    <div class="row">
+      <button class="ds-btn">Action</button>
+      <button class="ds-btn is-active">Active</button>
+      <button class="ds-btn" disabled>Disabled</button>
+      <button class="ds-btn ds-btn--outline">Outline</button>
+      <button class="ds-btn ds-btn--outline is-active">Outline active</button>
+      <button class="ds-btn ds-btn--solid">Solid</button>
+      <button class="ds-btn ds-btn--link">Link</button>
+      <button class="ds-btn ds-btn--icon" aria-label="Icon">?</button>
+      <button class="ds-btn ds-btn--ghost" aria-label="Ghost">Ghost</button>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="ds-section-heading">Pills, badges, chips, kbd</h2>
+    <div class="row">
+      <span class="ds-pill">Angular</span>
+      <span class="ds-badge">Published</span>
+      <span class="ds-chip ds-chip--primary">Publication</span>
+      <span class="ds-chip ds-chip--success">Project</span>
+      <span class="ds-chip ds-chip--neutral">Page</span>
+      <span class="ds-kbd">Ctrl</span>
+      <span class="ds-kbd ds-kbd--outline">K</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="ds-section-heading">Cards</h2>
+    <div class="grid">
+      <article class="ds-card ds-card--lift">
+        <h3 class="ds-card__title">Card title</h3>
+        <span class="ds-badge">Published</span>
+        <hr class="ds-card__divider">
+        <p>Lifts on hover.</p>
+        <a class="ds-btn ds-btn--sm" href="#">Read</a>
+      </article>
+      <article class="ds-card ds-card--raised">
+        <h3 class="ds-card__title">Raised card</h3>
+        <p>Larger shadow, no lift.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="ds-section-heading">Headings, segmented, input</h2>
+    <h3 class="ds-section-heading ds-section-heading--bar">Experience</h3>
+    <div class="row">
+      <div class="ds-segmented">
+        <button class="ds-segmented__item is-active">EN</button>
+        <button class="ds-segmented__item">SV</button>
+      </div>
+      <input class="ds-input" style="max-width: 20rem" placeholder="Search...">
+    </div>
+  </section>
+
+  <section>
+    <h2 class="ds-section-heading">Popover, menu, modal, code, table</h2>
+    <div class="row" style="align-items: flex-start">
+      <div class="ds-popover ds-menu">
+        <a class="ds-menu__item" href="#">Item one</a>
+        <a class="ds-menu__item" href="#">Item two</a>
+      </div>
+      <div class="ds-popover ds-popover--tooltip">
+        <p class="ds-popover__title">Shortcuts</p>
+        <span class="ds-kbd">j</span> down
+      </div>
+    </div>
+    <div class="ds-modal-backdrop demo-modal">
+      <div class="ds-modal">
+        <div class="ds-modal__header"><h3 class="ds-modal__title">Modal</h3><button class="ds-modal__close" aria-label="Close">&times;</button></div>
+        <div class="ds-modal__body"><pre class="ds-code">@article{key, title={Example}}</pre></div>
+        <div class="ds-modal__footer"><button class="ds-btn ds-btn--sm">Copy</button></div>
+      </div>
+    </div>
+    <table class="ds-table" style="margin-top: 1rem">
+      <thead><tr><th>Title</th><th>Year</th></tr></thead>
+      <tbody><tr><td><a href="#">Paper one</a></td><td>2024</td></tr><tr><td><a href="#">Paper two</a></td><td>2025</td></tr></tbody>
+    </table>
+  </section>
+
+  <footer class="ds-footer">Footer text</footer>
+</main>
+<script>
+  document.getElementById('theme').addEventListener('click', () => document.documentElement.classList.toggle('dark-mode'));
+  const names = ['bg', 'bg-subtle', 'text', 'text-muted', 'heading', 'primary', 'primary-light', 'success', 'hint', 'code-bg'];
+  document.getElementById('swatches').innerHTML = names.map(n =>
+    `<div class="swatch"><i style="background: var(--ds-color-${n})"></i><span>--ds-color-${n}</span></div>`).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+// Sass API (no CSS output): `@use '@johmara/design-system' as ds;`
+// Exposes breakpoints ($bp-sm/md/lg, up(), down()) and mixins (focus-ring, hover-scale, lift, visually-hidden).
+@forward 'mixins';

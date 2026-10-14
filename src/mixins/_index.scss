@@ -1,0 +1,42 @@
+@forward '../tokens/breakpoints';
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--ds-color-primary);
+    outline-offset: 2px;
+  }
+}
+
+// Hover scale used on header controls and ghost buttons.
+@mixin hover-scale($hover: 1.05, $active: 0.95) {
+  transition: all var(--ds-duration-base) var(--ds-ease);
+
+  &:hover {
+    transform: scale($hover);
+  }
+
+  &:active {
+    transform: scale($active);
+  }
+}
+
+// Card/button lift on hover.
+@mixin lift($distance: 2px) {
+  transition: all var(--ds-duration-base) var(--ds-ease);
+
+  &:hover {
+    transform: translateY(-$distance);
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,150 @@
+@use '../mixins' as m;
+
+// Base. Default look = the site's "action" button (bordered, bold).
+.ds-btn {
+  display: inline-block;
+  padding: var(--ds-space-2) var(--ds-space-4);
+  border: 2px solid var(--ds-color-text);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-color-bg-subtle);
+  color: var(--ds-color-text);
+  font: inherit;
+  font-size: var(--ds-text-sm);
+  font-weight: bold;
+  line-height: var(--ds-leading-normal);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--ds-duration-base) var(--ds-ease);
+
+  &:hover {
+    background: var(--ds-color-text);
+    color: var(--ds-color-bg-subtle);
+    transform: translateY(-2px);
+  }
+
+  &.is-active {
+    background: var(--ds-color-heading);
+    border-color: var(--ds-color-heading);
+    color: var(--ds-color-bg);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  @include m.focus-ring;
+}
+
+// Small ghost/outline button (cv-button, tools trigger, vim toggle).
+.ds-btn--outline {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--ds-color-text-muted);
+  background: transparent;
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-medium);
+  opacity: 0.5;
+
+  &:hover {
+    background: transparent;
+    border-color: var(--ds-color-primary);
+    color: var(--ds-color-primary);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.is-active {
+    background: var(--ds-color-primary);
+    border-color: var(--ds-color-primary);
+    color: var(--ds-color-bg);
+    opacity: 1;
+  }
+}
+
+// Filled primary (print-button).
+.ds-btn--solid {
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  background: var(--ds-color-primary);
+  color: var(--ds-color-bg);
+  font-size: 0.9rem;
+  font-weight: var(--ds-weight-semibold);
+
+  &:hover {
+    background: var(--ds-color-primary);
+    color: var(--ds-color-bg);
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+// Text link styled as a button (cite-btn, view-all-link).
+.ds-btn--link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ds-color-primary);
+  font-size: 0.9rem;
+  font-weight: var(--ds-weight-regular);
+
+  &:hover {
+    background: none;
+    color: var(--ds-color-primary);
+    text-decoration: underline;
+    transform: none;
+  }
+}
+
+// Round icon button (theme toggle, search trigger, help toggle).
+.ds-btn--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--ds-color-primary);
+  border-radius: var(--ds-radius-round);
+  background: transparent;
+  color: var(--ds-color-primary);
+  opacity: 0.5;
+
+  &:hover,
+  &.is-active {
+    background: var(--ds-color-primary);
+    color: var(--ds-color-bg);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Ghost icon button: no border, muted until hovered.
+.ds-btn--ghost {
+  border: 0;
+  background: transparent;
+  color: var(--ds-color-text-muted);
+  opacity: 0.5;
+
+  &:hover {
+    background: transparent;
+    color: var(--ds-color-primary);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.ds-btn--sm {
+  padding: 0.25rem 0.6rem;
+  font-size: var(--ds-text-xs);
+}

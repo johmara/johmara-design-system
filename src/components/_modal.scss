@@ -1,0 +1,81 @@
+@use '../mixins' as m;
+
+.ds-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--ds-z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ds-color-overlay);
+  animation: ds-fade-in var(--ds-duration-base) var(--ds-ease);
+}
+
+.ds-modal {
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg);
+  color: var(--ds-color-text-muted);
+  box-shadow: var(--ds-shadow-xl);
+  animation: ds-slide-down var(--ds-duration-slow) var(--ds-ease);
+}
+
+.ds-modal--palette {
+  max-width: 600px;
+  max-height: 70vh;
+  border-radius: var(--ds-radius-xl);
+}
+
+.ds-modal__header,
+.ds-modal__body,
+.ds-modal__footer {
+  padding: var(--ds-space-5);
+
+  @include m.down(m.$bp-sm) {
+    padding: var(--ds-space-4);
+  }
+}
+
+.ds-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ds-color-bg-subtle);
+}
+
+.ds-modal__title {
+  margin: 0;
+  color: var(--ds-color-heading);
+  font-size: var(--ds-text-xl);
+}
+
+.ds-modal__footer {
+  border-top: 1px solid var(--ds-color-bg-subtle);
+}
+
+.ds-modal__close {
+  border: 0;
+  background: none;
+  color: var(--ds-color-text-muted);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--ds-color-heading);
+  }
+}
+
+.ds-code {
+  padding: var(--ds-space-4);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-color-bg-subtle);
+  color: var(--ds-color-text-muted);
+  font-family: var(--ds-font-mono);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}

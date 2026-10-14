@@ -1,0 +1,39 @@
+{
+  "name": "@johmara/design-system",
+  "version": "0.1.0",
+  "description": "Design tokens and CSS/SCSS components for johmara.github.io",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johmara/johmara-design-system.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "sass": "src/index.scss",
+  "style": "dist/design-system.css",
+  "exports": {
+    ".": {
+      "sass": "./src/index.scss",
+      "default": "./src/index.scss"
+    },
+    "./css": "./dist/design-system.css",
+    "./css/min": "./dist/design-system.min.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./scss/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && sass --no-source-map src/design-system.scss dist/design-system.css && sass --no-source-map --style=compressed src/design-system.scss dist/design-system.min.css && sass --no-source-map src/tokens.scss dist/tokens.css",
+    "watch": "sass --watch src/design-system.scss:dist/design-system.css",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

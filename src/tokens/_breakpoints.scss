@@ -1,0 +1,16 @@
+// Custom properties cannot be used in media queries, so breakpoints are SCSS only.
+$bp-sm: 768px !default;
+$bp-md: 1024px !default;
+$bp-lg: 1250px !default;
+
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin down($bp) {
+  @media (max-width: $bp - 1px) {
+    @content;
+  }
+}

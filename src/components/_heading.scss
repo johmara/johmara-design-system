@@ -1,0 +1,17 @@
+.ds-section-heading {
+  margin: 1.25rem 0 0.4rem;
+  color: var(--ds-color-heading);
+  font-size: var(--ds-text-md);
+}
+
+// CV style: uppercase with accent bar.
+.ds-section-heading--bar {
+  margin: var(--ds-space-5) 0 var(--ds-space-3);
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--ds-color-primary);
+  color: var(--ds-color-primary);
+  font-size: var(--ds-text-sm);
+  font-weight: var(--ds-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

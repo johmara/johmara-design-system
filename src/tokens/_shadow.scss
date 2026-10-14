@@ -1,0 +1,14 @@
+:root {
+  --ds-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ds-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --ds-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --ds-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode,
+[data-theme='dark'] {
+  --ds-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --ds-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --ds-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --ds-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
