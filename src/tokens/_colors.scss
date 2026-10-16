@@ -33,10 +33,6 @@
 :root {
   @include light-colors;
 
-  // Text on hint/success fills. Same in both themes.
-  --ds-color-on-hint: #fff;
-  --ds-color-on-success: #1f1f1f;
-
   // Legacy aliases (johmara.github.io)
   --background-color: var(--ds-color-bg);
   --background-color-darker: var(--ds-color-bg-subtle);
