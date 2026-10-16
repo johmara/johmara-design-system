@@ -54,6 +54,34 @@
   border-radius: var(--ds-radius-round);
 }
 
+// Standard secondary action: neutral border, accent on hover and when active/pressed/checked.
+.ds-btn--secondary {
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border: 1.5px solid var(--ds-color-border);
+  background: var(--ds-color-bg);
+  color: var(--ds-color-text);
+  font-size: 0.875rem;
+  font-weight: var(--ds-weight-regular);
+  transition: border-color var(--ds-duration-fast) var(--ds-ease), color var(--ds-duration-fast) var(--ds-ease);
+
+  &:hover {
+    background: var(--ds-color-bg);
+    border-color: var(--ds-color-primary);
+    color: var(--ds-color-primary);
+    transform: none;
+  }
+
+  &.is-active,
+  &[aria-pressed='true'],
+  &[aria-checked='true'],
+  &[aria-selected='true'] {
+    background: var(--ds-color-bg);
+    border-color: var(--ds-color-primary);
+    color: var(--ds-color-primary);
+    font-weight: var(--ds-weight-semibold);
+  }
+}
+
 // Small ghost/outline button (cv-button, tools trigger, vim toggle).
 .ds-btn--outline {
   padding: 0.35rem 0.6rem;
@@ -115,6 +143,14 @@
     color: var(--ds-color-primary);
     text-decoration: underline;
     transform: none;
+  }
+}
+
+// Destructive text action; combine with --link.
+.ds-btn--link.ds-btn--danger {
+  &,
+  &:hover {
+    color: var(--ds-color-danger);
   }
 }
 

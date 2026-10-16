@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0
+
+- Add tokens `--ds-color-border` and `--ds-color-danger` (light and dark).
+- Add `.ds-btn--secondary` (neutral border, accent on hover/active; also reacts to `aria-pressed`, `aria-checked`, `aria-selected`).
+- Add `.ds-btn--danger` for use with `.ds-btn--link`.
+- Add `.ds-input--sm` and `.ds-input--inline`; inputs get a hover border.
+
 ## 0.3.3
 
 - Add `.ds-back-link--fixed` (pinned top-left, hidden in print).

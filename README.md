@@ -50,7 +50,7 @@ Dark mode: add `.dark-mode` (or `data-theme="dark"`) to `<html>`.
 
 | Area | Names |
 |---|---|
-| Colors | `--ds-color-{bg,bg-subtle,text,text-muted,heading,primary,primary-light,success,hint,code-bg,overlay}` |
+| Colors | `--ds-color-{bg,bg-subtle,text,text-muted,heading,primary,primary-light,success,hint,code-bg,overlay,border,danger}` |
 | Type | `--ds-font-{sans,mono}`, `--ds-text-{2xs..2xl}`, `--ds-weight-*`, `--ds-leading-*` |
 | Spacing / radius / shadow | `--ds-space-1..7`, `--ds-radius-{sm,md,lg,xl,pill,round}`, `--ds-shadow-{sm,md,lg,xl}` |
 | Motion / z-index | `--ds-duration-{fast,base,slow}`, `--ds-z-*`, keyframes `ds-fade-in`, `ds-slide-up`, `ds-slide-down`, `ds-drop-down` |
