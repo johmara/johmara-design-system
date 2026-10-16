@@ -13,14 +13,11 @@
   gap: var(--ds-space-2);
   height: 2.5rem;
   padding: 0 var(--ds-space-2);
-  color: var(--ds-color-text-muted);
+  color: var(--ds-color-text);
   text-decoration: none;
-  opacity: 0.5;
   transition: all var(--ds-duration-base) var(--ds-ease);
 
   &:hover {
-    color: var(--ds-color-primary);
-    opacity: 1;
     transform: scale(1.05);
   }
 
