@@ -5,8 +5,8 @@
 //   <svg class="ds-back-link__arrow">...</svg>
 //   <img class="ds-back-link__mark" src="monogram.png" alt="">
 // </a>
-// The mark is expected to be a dark glyph on a transparent background; it is tinted to the
-// primary color in light mode and inverted to white in dark mode (the arrow turns white too).
+// The mark is expected to be a dark glyph on a transparent background; it is shown as-is
+// (black) in light mode and inverted to white in dark mode (the arrow turns white too).
 .ds-back-link {
   display: inline-flex;
   align-items: center;
@@ -45,7 +45,6 @@
   display: block;
   width: auto;
   height: 1.75rem;
-  filter: invert(34%) sepia(98%) saturate(1212%) hue-rotate(178deg) brightness(93%) contrast(102%);
 }
 
 // Dark mode: arrow and mark are pure white.
