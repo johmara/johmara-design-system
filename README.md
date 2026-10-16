@@ -55,7 +55,7 @@ Dark mode: add `.dark-mode` (or `data-theme="dark"`) to `<html>`.
 | Spacing / radius / shadow | `--ds-space-1..7`, `--ds-radius-{sm,md,lg,xl,pill,round}`, `--ds-shadow-{sm,md,lg,xl}` |
 | Motion / z-index | `--ds-duration-{fast,base,slow}`, `--ds-z-*`, keyframes `ds-fade-in`, `ds-slide-up`, `ds-slide-down`, `ds-drop-down` |
 | Breakpoints (Sass) | `$bp-sm` 768px, `$bp-md` 1024px, `$bp-lg` 1250px, mixins `up()`, `down()` |
-| Components | `.ds-btn` (`--outline --solid --link --icon --ghost --transparent --round --sm`), `.ds-pill`, `.ds-badge`, `.ds-chip`, `.ds-card`, `.ds-kbd`, `.ds-section-heading`, `.ds-popover`, `.ds-menu`, `.ds-modal`, `.ds-code`, `.ds-segmented`, `.ds-input`, `.ds-table`, `.ds-footer`, `.ds-back-link` |
+| Components | `.ds-btn` (`--outline --solid --link --icon --ghost --transparent --round --sm`), `.ds-pill`, `.ds-badge`, `.ds-chip`, `.ds-card`, `.ds-kbd`, `.ds-section-heading`, `.ds-popover`, `.ds-menu`, `.ds-modal`, `.ds-code`, `.ds-segmented`, `.ds-input`, `.ds-table`, `.ds-footer`, `.ds-back-link` (`--fixed`) |
 
 Legacy variable names from the site (`--accent-color-2`, `--background-color`, ...) are kept as aliases of the `--ds-*` tokens.
 

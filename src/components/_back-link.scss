@@ -35,6 +35,18 @@
   @include m.focus-ring;
 }
 
+// Pin to the top-left corner, level with a fixed header (hidden when printing).
+.ds-back-link--fixed {
+  position: fixed;
+  top: var(--ds-space-4);
+  left: var(--ds-space-4);
+  z-index: var(--ds-z-header);
+
+  @media print {
+    display: none;
+  }
+}
+
 .ds-back-link__arrow {
   width: 1.25rem;
   height: 1.25rem;
