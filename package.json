@@ -1,6 +1,6 @@
 {
   "name": "@johmara/design-system",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Design tokens and CSS/SCSS components for johmara.github.io",
   "license": "MIT",
   "repository": {

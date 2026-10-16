@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.3.2
+
+- `.ds-back-link`: the mark is shown as-is (black) in light mode instead of blue-tinted. (0.3.0 shipped the tinted mark; 0.3.1 was never published.)
+
 ## 0.3.0
 
-- Add `.ds-back-link` (arrow plus brand mark image, with `__arrow` and `__mark` parts). The arrow uses the text color; the mark is shown as-is (black) in light mode. In dark mode both are white.
+- Add `.ds-back-link` (arrow plus brand mark image, with `__arrow` and `__mark` parts). The arrow uses the text color; the mark is tinted to the primary color in light mode. In dark mode both are white.
 
 ## 0.2.0
 
