@@ -17,6 +17,13 @@
   text-decoration: none;
   transition: all var(--ds-duration-base) var(--ds-ease);
 
+  // Keep the text color in every link state (browsers default :active to red, :visited to purple).
+  &:visited,
+  &:hover,
+  &:active {
+    color: var(--ds-color-text);
+  }
+
   &:hover {
     transform: scale(1.05);
   }
