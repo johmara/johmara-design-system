@@ -1,9 +1,12 @@
 # Changelog
 
+## 0.3.3
+
+- Add `.ds-back-link--fixed` (pinned top-left, hidden in print).
+
 ## 0.3.2
 
 - `.ds-back-link`: the mark is shown as-is (black) in light mode instead of blue-tinted. (0.3.0 shipped the tinted mark; 0.3.1 was never published.)
-- Add `.ds-back-link--fixed` (pinned top-left, hidden in print).
 
 ## 0.3.0
 
