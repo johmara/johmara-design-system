@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+- Breaking markup change: `.ds-back-link__mark` is now an empty `<span aria-hidden="true">`, not an `<img>`. The JM monogram ships with the package (`assets/monogram.png`) and is drawn as a CSS mask, so it follows the link's text color (black, white in dark mode) and consumers no longer supply an image.
+
 ## 0.4.0
 
 - Add tokens `--ds-color-border` and `--ds-color-danger` (light and dark).

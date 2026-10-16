@@ -1,12 +1,11 @@
 @use '../mixins' as m;
 
-// Back-to-home link: arrow plus a brand mark image.
+// Back-to-home link: arrow plus the JM monogram (shipped in assets/monogram.png).
 // <a class="ds-back-link" href="/" aria-label="Back to site">
 //   <svg class="ds-back-link__arrow">...</svg>
-//   <img class="ds-back-link__mark" src="monogram.png" alt="">
+//   <span class="ds-back-link__mark" aria-hidden="true"></span>
 // </a>
-// The mark is expected to be a dark glyph on a transparent background; it is shown as-is
-// (black) in light mode and inverted to white in dark mode (the arrow turns white too).
+// Arrow and mark use the text color: black in light mode, white in dark mode.
 .ds-back-link {
   display: inline-flex;
   align-items: center;
@@ -55,8 +54,13 @@
 
 .ds-back-link__mark {
   display: block;
-  width: auto;
-  height: 1.75rem;
+  height: 1rem;
+  aspect-ratio: 320 / 195;
+  flex-shrink: 0;
+  // The monogram is an alpha mask, so it takes the link's text color (black, white in dark mode).
+  background-color: currentColor;
+  -webkit-mask: url('../assets/monogram.png') center / contain no-repeat;
+  mask: url('../assets/monogram.png') center / contain no-repeat;
 }
 
 // Dark mode: arrow and mark are pure white.
@@ -68,9 +72,4 @@
   &:active {
     color: #fff;
   }
-}
-
-.dark-mode .ds-back-link__mark,
-[data-theme='dark'] .ds-back-link__mark {
-  filter: invert(1);
 }
