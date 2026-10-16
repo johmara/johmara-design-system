@@ -29,7 +29,10 @@
 }
 
 .ds-menu__item {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
   width: 100%;
   padding: 0.45rem 0.6rem;
   border: 0;

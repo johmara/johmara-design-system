@@ -38,6 +38,22 @@
   @include m.focus-ring;
 }
 
+// Transparent background at rest; the default hover fill still applies.
+.ds-btn--transparent {
+  background: transparent;
+}
+
+// Circular, fixed-size button for a single icon or glyph. Combine with --ghost or --icon.
+.ds-btn--round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: var(--ds-radius-round);
+}
+
 // Small ghost/outline button (cv-button, tools trigger, vim toggle).
 .ds-btn--outline {
   padding: 0.35rem 0.6rem;
