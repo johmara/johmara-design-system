@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0
+
+- Add `.ds-back-link` (arrow plus brand mark image, with `__arrow` and `__mark` parts). The mark is tinted to the primary color in light mode and inverted in dark mode.
+
 ## 0.2.0
 
 - Add `.ds-btn--transparent` (transparent at rest, default hover fill) and `.ds-btn--round` (2.5rem circular button).
