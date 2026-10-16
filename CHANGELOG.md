@@ -2,7 +2,7 @@
 
 ## 0.3.0
 
-- Add `.ds-back-link` (arrow plus brand mark image, with `__arrow` and `__mark` parts). The mark is tinted to the primary color in light mode and inverted in dark mode.
+- Add `.ds-back-link` (arrow plus brand mark image, with `__arrow` and `__mark` parts). The arrow uses the text color; the mark is tinted to the primary color in light mode. In dark mode both are white.
 
 ## 0.2.0
 
